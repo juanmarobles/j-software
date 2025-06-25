@@ -181,10 +181,12 @@ logger.error = (msg, options) => {
 	loggerError(msg, options);
 }
 
+
+
 export default defineConfig({
+	base: "https://juanmarobles.github.io/j-software/",
 	customLogger: logger,
 	plugins: [react(), addTransformIndexHtml],
-	base: "https://juanmarobles.github.io/j-software",
 	server: {
 		cors: true,
 		headers: {
@@ -193,7 +195,7 @@ export default defineConfig({
 		allowedHosts: true,
 	},
 	resolve: {
-		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json',],
+		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json'],
 		alias: {
 			'@': path.resolve(__dirname, './src'),
 		},
