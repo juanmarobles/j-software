@@ -181,10 +181,8 @@ logger.error = (msg, options) => {
 	loggerError(msg, options);
 }
 
-
-
 export default defineConfig({
-	base: "https://juanmarobles.github.io/j-software/",
+	base: "/j-software/",
 	customLogger: logger,
 	plugins: [react(), addTransformIndexHtml],
 	server: {
